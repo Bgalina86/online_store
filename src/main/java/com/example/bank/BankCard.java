@@ -34,11 +34,4 @@ public class BankCard  {
     public void setPin(String pin) {
         this.pin = pin;
     }
-
-    /*
-    public void addBankCard(int idClient, String cardNumber, String implementationPeriod, String pin){
-
-    }
-     */
-
 }

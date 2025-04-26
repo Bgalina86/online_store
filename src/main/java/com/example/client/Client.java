@@ -16,17 +16,10 @@ public class Client {
     private String phone;
     private String birthdate;
     private boolean isActive;
-    private List<BankCard> bankCardList;
-    private BankCard bankCard;
-    private AnalyticalAccount analyticalAccount;
-    private String bankAnalyticalAccountNumber;
-    private Double balanceClients;
-    private String cartNumber;
-    private String implementationPeriod;
-    private String pin;
+      private AnalyticalAccount analyticalAccount;
 
     public Client(int idClient, String firstName, String lastName, String middleName, String email,
-        String phone, String birthdate, boolean isActive, AnalyticalAccount analyticalAccount) {
+        String phone, String birthdate, boolean isActive) {
         this.idClient = idClient;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -35,17 +28,15 @@ public class Client {
         this.phone = phone;
         this.birthdate = birthdate;
         this.isActive = isActive;
-        this.analyticalAccount = new AnalyticalAccount(idClient, bankAnalyticalAccountNumber,
-            balanceClients, new BankCard(cartNumber, implementationPeriod, pin));
-       // this.bankCard = new BankCard(cartNumber, implementationPeriod, pin);
+        this.analyticalAccount = new AnalyticalAccount(idClient, idClient + "ACCT"); // имя аккаунта - автоматически сформировано
     }
-    //Добавление карт в список клиента
 
-    public Client Client(int idClient){
-
-        return (Client) List.of(idClient, firstName, lastName, middleName, email,
-            phone, birthdate, isActive, analyticalAccount);
+    public void enrollNewCard(String cardId, String period, String pin)
+    {
+        this.analyticalAccount.addCard(cardId, period, pin);
     }
+
+
     public String getFirstName(int id) {
         return firstName;
     }
@@ -70,18 +61,7 @@ public class Client {
         return analyticalAccount.getBankCardList();
     }
 
-    public Double getBalanceAnalyticalAccount(int id) {
-        return analyticalAccount.getBalanceClients(id);
+    public Double getBalance() {
+        return analyticalAccount.getBalance();
     }
-
-    public void addBankCardInBankListClient(BankCard bankCard) {
-        Map<Client, BankCard> clientBankCard = new HashMap<>();
-       clientBankCard.put(Client(idClient), new BankCard(cartNumber, implementationPeriod,pin));
-
-        this.bankCardList.add(bankCard);
-    }
-
-
-
-
 }

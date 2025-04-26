@@ -28,6 +28,12 @@ public class AnalyticalAccount {
         this.clientBalance = 0.0; // изначально счет пустой, на нем нет денег
     }
 
+    public double getBalance()
+    {
+        return this.clientBalance;
+    }
+
+
     public void deposit(double amount)
     {
         this.clientBalance += amount;
@@ -38,6 +44,7 @@ public class AnalyticalAccount {
         // овердрафт запрещен
         if(this.clientBalance - amount < 0)
             throw new Exception("Овердрафт");
+        this.clientBalance -= amount;
     }
 
     public  void addCard(String cardNumber, String implementationPeriod, String pin)
