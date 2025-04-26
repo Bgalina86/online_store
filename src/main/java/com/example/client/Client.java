@@ -6,9 +6,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ClientNew {
+public class Client {
 
-    private int id;
+    private int idClient;
     private String firstName;
     private String lastName;
     private String middleName;
@@ -25,9 +25,9 @@ public class ClientNew {
     private String implementationPeriod;
     private String pin;
 
-    public ClientNew(int id, String firstName, String lastName, String middleName, String email,
+    public Client(int idClient, String firstName, String lastName, String middleName, String email,
         String phone, String birthdate, boolean isActive, AnalyticalAccount analyticalAccount) {
-        this.id = id;
+        this.idClient = idClient;
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
@@ -35,23 +35,22 @@ public class ClientNew {
         this.phone = phone;
         this.birthdate = birthdate;
         this.isActive = isActive;
-        this.analyticalAccount = new AnalyticalAccount(id, bankAnalyticalAccountNumber,
+        this.analyticalAccount = new AnalyticalAccount(idClient, bankAnalyticalAccountNumber,
             balanceClients, new BankCard(cartNumber, implementationPeriod, pin));
        // this.bankCard = new BankCard(cartNumber, implementationPeriod, pin);
     }
     //Добавление карт в список клиента
 
+    public Client Client(int idClient){
 
-
-    public int getId() {
-        return id;
+        return (Client) List.of(idClient, firstName, lastName, middleName, email,
+            phone, birthdate, isActive, analyticalAccount);
     }
-
-    public String getFirstName() {
+    public String getFirstName(int id) {
         return firstName;
     }
 
-    public String getLastName() {
+    public String getLastName(int id) {
         return lastName;
     }
 
@@ -67,7 +66,7 @@ public class ClientNew {
         isActive = active;
     }
 
-    public List<BankCard> getBankCardList() {
+    public List<BankCard> getBankCardList(int id) {
         return analyticalAccount.getBankCardList();
     }
 
@@ -76,20 +75,12 @@ public class ClientNew {
     }
 
     public void addBankCardInBankListClient(BankCard bankCard) {
-        /**
-         * Таблица ClientBank
-         */
-        //ClientNew client = ClientNew()
-        Map<ClientNew, BankCard> clientBankCard = new HashMap<>();
-
-        /**
-         * Список карт клиента
-         */
-        //ClientNew сlient = ClientNew.this.;
-       // clientBankCard.put(сlient, new BankCard("123654", "20.12.2056","156"));
+        Map<Client, BankCard> clientBankCard = new HashMap<>();
+       clientBankCard.put(Client(idClient), new BankCard(cartNumber, implementationPeriod,pin));
 
         this.bankCardList.add(bankCard);
     }
+
 
 
 

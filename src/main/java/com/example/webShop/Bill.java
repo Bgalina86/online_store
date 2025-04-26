@@ -28,4 +28,6 @@ public class Bill {
     public boolean isPurchaseResult() {
         return purchaseResult;
     }
+
+    //вывод по чеку
 }
