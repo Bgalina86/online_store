@@ -1,7 +1,5 @@
 package com.example.bank;
 
-import java.util.Collection;
-import java.util.Iterator;
 
 /**
  * Банковская карта клиента, может быть привязана к аналитическому счету, не содержит собственный
@@ -12,7 +10,7 @@ public class BankCard  {
     private String cardNumber;
     private String implementationPeriod;
     private String pin;
-    private int idClient;
+
 
 
     public BankCard(String cardNumber, String implementationPeriod, String pin) {

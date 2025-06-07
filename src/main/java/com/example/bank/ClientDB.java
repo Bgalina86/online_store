@@ -14,12 +14,8 @@ public class ClientDB {
         /**
          * Таблица данных Client
          */
-        Client client1 = new Client(1, "Ivan", "Ivanov", "Ivanovich", "emalivan@trfg.ru",
-            "+78989898989", "24.05.2000", true, new AnalyticalAccount(1, "12456", 4578136.56,
-            new BankCard("4578", "20.10.2055", "124")));
-        Client client2 = new Client(2, "Vasa", "Vetrov", "Ivanovich", "vetrov@trfg.ru",
-            "+78787877778", "15.05.1999", true, new AnalyticalAccount(2, "12365", 45785465.12,
-            new BankCard("458963", "20.10.2066", "452")));
+        Client client1 = new Client(1, "Ivan", true);
+        Client client2 = new Client(2, "Vasa",  true);
 
         /**
          * Таблица ClientBank
