@@ -8,23 +8,23 @@ public class BankOperation extends BankCard {
 
     private int balanceClients;
 
-    public BankOperation(String cardNumber, String implementationPeriod, String pin) {
-        super(cardNumber, implementationPeriod, pin);
+    public BankOperation(String cardNumber) {
+        super(cardNumber);
     }
 
     public int debitingFunds(int pay) {
-        int itog = balanceClients - pay;
-        return itog;
+        int result = balanceClients - pay;
+        return result;
     }
 
     public int receivingFunds(int receive) {
-        int itog = balanceClients + receive;
-        return itog;
+        int result = balanceClients + receive;
+        return result;
     }
 
-    public void printItogBalance(int pay, int receive) {
-        int itogDebiting = debitingFunds(pay);
-        int itogReceiving = receivingFunds(receive);
-        System.out.println("Списано со счета" + itogDebiting + "Поступило на счет" + itogReceiving);
+    public void printResultBalance(int pay, int receive) {
+        int resultDebiting = debitingFunds(pay);
+        int resultReceiving = receivingFunds(receive);
+        System.out.println("Списано со счета" + resultDebiting + "Поступило на счет" + resultReceiving);
     }
 }

@@ -82,12 +82,13 @@ public class Basket {
      *
      * @return
      */
-    public Serializable getCostOfGoods(String productName) {
-        Goods goods = new Goods(productName, quantityOfGoods, priceProduct);
-        costOfGoods = goods.priceProduct;
+    public Serializable getCostOfGoods(String productName, int quantityOfProduct) {
+        Goods goods = new Goods(productName, quantityOfProduct);
+        double costOfGoods = goods.priceProduct;
         if (goods.quantityOfProduct == 0) {
             return new IllegalArgumentException("Товар отсутствует");
         }
+
         return costOfGoods;
     }
 

@@ -25,23 +25,14 @@ public class ClientDB {
         /**
          * Список карт клиента
          */
-        clientBankCard.put(client1, new BankCard("123654", "20.12.2056","156"));
-        clientBankCard.put(client2, new BankCard("456787", "24.03.2058","453"));
+        clientBankCard.put(client1, new BankCard("123654"));
+        clientBankCard.put(client2, new BankCard("456787"));
 
-        /**
-         * Добавляем информацию о карточках клиента
-         */
-//        List<BankCard> cardList = new ArrayList<>();
-//        client1.addBankCard(new BankCard("123412345", "12.05.2035", "1243"));
-//        client1.addBankCard(new BankCard("145786421", "12.06.2035", "1243"));
-//        client1.addBankCard(new BankCard("145781256", "12.07.2035", "1243"));
-//
-//        client2.addBankCard(new BankCard("457841555", "12.05.2035", "1243"));
         /**
          * Таблица balanceClients баланс клиента
          */
 
-      //  AnalyticalAccount analyticalAccount1 = new AnalyticalAccount(1, "123", 200000.23);
+      AnalyticalAccount analyticalAccount1 = new AnalyticalAccount(1, 8000.50);
 
     }
 

@@ -17,4 +17,5 @@ import com.example.webShop.Basket;
  *  счету - получает информацию по счету и привязанным картам
  */
 public class Shop {
-Basket basket = new Basket()}
+Basket basket = new Basket();
+}

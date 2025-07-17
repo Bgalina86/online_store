@@ -12,9 +12,9 @@ public class Goods {
     double priceProduct;
 
 
-    public Goods(String productName,  double priceGood) {
+    public Goods(String productName,  double priceProduct) {
         this.productName = productName;
-        //this.quantityOfProduct = quantityOfProduct;
+
         this.priceProduct = priceProduct;
 
     }

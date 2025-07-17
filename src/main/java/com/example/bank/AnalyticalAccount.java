@@ -14,16 +14,15 @@ public class AnalyticalAccount {
     private String number;
     private List<BankCard> bankCardList;
 
-    public AnalyticalAccount(int clientID, String accountNumber) {
+    public AnalyticalAccount(int clientID, Double clientBalance) {
         //
         // Создать пустой список карт, привязанных к данному счету
         //
-        List<BankCard> cardList = new ArrayList<>();
+        List<BankCard> bankCardList = new ArrayList<>();
         //
         // Заполнить остальные поля
         //
         this.clientID = clientID;
-        this.number = accountNumber;
         this.clientBalance = 0.0; // изначально счет пустой, на нем нет денег
     }
 
@@ -45,8 +44,8 @@ public class AnalyticalAccount {
         this.clientBalance -= amount;
     }
 
-    public void addCard(String cardNumber, String implementationPeriod, String pin) {
-        BankCard newCard = new BankCard(cardNumber, implementationPeriod, pin);
+    public void addCard(String cardNumber) {
+        BankCard newCard = new BankCard(cardNumber);
         this.bankCardList.add(newCard);
     }
 

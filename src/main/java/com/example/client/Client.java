@@ -9,26 +9,28 @@ import java.util.Map;
 public class Client {
 
     private int idClient;
+    private double clientBalance;
     private String firstName;
     private boolean isActive;
-      private AnalyticalAccount analyticalAccount;
+    private AnalyticalAccount analyticalAccount;
 
     public Client(int idClient, String firstName, boolean isActive) {
         this.idClient = idClient;
         this.firstName = firstName;
         this.isActive = isActive;
-        this.analyticalAccount = new AnalyticalAccount(idClient, idClient + "ACCT"); // имя аккаунта - автоматически сформировано
+        this.analyticalAccount = new AnalyticalAccount(idClient,
+            clientBalance);
     }
 
-    public void enrollNewCard(String cardId, String period, String pin)
-    {
-        this.analyticalAccount.addCard(cardId, period, pin);
+    public void enrollNewCard(String cardId) {
+        this.analyticalAccount.addCard(cardId);
     }
 
 
     public String getFirstName(int id) {
         return firstName;
     }
+
     public List<BankCard> getBankCardList(int id) {
         return analyticalAccount.getBankCardList();
     }
