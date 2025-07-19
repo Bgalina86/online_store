@@ -34,5 +34,4 @@ public class GoodsDB {
         }
         return goods;
     }
-
 }

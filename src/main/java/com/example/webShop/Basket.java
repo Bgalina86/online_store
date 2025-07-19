@@ -19,10 +19,9 @@ import java.util.Objects;
 public class Basket {
 
     private Map<Goods,Integer> productName;
-    //private int quantityOfGoods;
-   // private Double costOfGoods; Подтягивание из БД за шт
+   
     private Double totalCostOfGoods;
-   // double priceProduct;
+
 
     public Basket() {
         this.productName = new HashMap<>();
@@ -30,7 +29,7 @@ public class Basket {
 
     public void addToBasket(Goods goods, int quantityOfGoods){
 
-        //if (quantityOfGoods > GoodsDB.goodsList.)
+        if (quantityOfGoods > GoodsDB.getGoods.)
     }
 
 

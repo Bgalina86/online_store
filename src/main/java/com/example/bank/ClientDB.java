@@ -33,6 +33,7 @@ public class ClientDB {
          */
 
       AnalyticalAccount analyticalAccount1 = new AnalyticalAccount(1, 8000.50);
+      AnalyticalAccount analyticalAccount2 = new AnalyticalAccount(2, 100.50);
 
     }
 
